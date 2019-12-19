@@ -1,0 +1,22 @@
+{%extends 'task_app/base.html'%}
+{%block content%}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6" style ="position: relative;
+    		top: 9rem;">
+			<form action="{% url 'task_app:upload' %}" method="post" enctype="multipart/form-data">
+    		{% csrf_token %}
+    			<input  type="file"
+           			   	title="Upload excel file"
+           				name="excel_file"
+           				required="required">
+    			<input  type="submit"
+           				value="Upload">
+			</form>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+{%endblock%}

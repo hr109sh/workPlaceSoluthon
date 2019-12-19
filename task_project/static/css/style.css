@@ -1,0 +1,24 @@
+#searchDropdown{
+	width: 20%;
+    background-color: darkgray;
+    color: white;
+    font-family: sans-serif;
+    cursor:pointer;
+}
+#searchText{
+	width: 79%;
+}
+#searchField{
+	margin-top: 2%;
+}
+#table-row{
+	margin-top: 1%;
+	display:none;
+}
+#details-headder{
+	background-color: gray;
+    color: whitesmoke;
+    text-align: center;
+    padding: 17px;
+    margin-top: 1%;
+}

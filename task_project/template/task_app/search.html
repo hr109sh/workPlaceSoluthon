@@ -1,0 +1,34 @@
+{%extends 'task_app/base.html'%}
+{%load static%}
+{%block content%}
+<style>
+
+</style>
+<div class="container">
+	<div class="row" id="searchField">
+		<select class="form-control" id="searchDropdown">
+			{% for tag in tag_list%}
+				{%if tag != 'id'%}
+  				<option value="{{tag}}">{{tag}}</option>
+  				{%endif%}
+  			{%endfor%}
+		</select>
+		<input id="searchText" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	</div>
+	<div class="row" id="table-row">
+  		<table class="table table-hover table-dark">
+  			<thead>
+    			<tr>
+      				<th scope="col">Name</th>
+      				<th scope="col">Email</th>
+      				<th scope="col">Phone Number</th>
+      				<th scope="col">Date of Birth</th>
+    			</tr>
+  			</thead>
+  			<tbody id="table-body">
+  			</tbody>
+		</table>
+  	</div>
+</div>
+<script src="{%static 'js/custom.js'%}"></script>
+{%endblock%}
